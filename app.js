@@ -16,8 +16,8 @@ setInterval(function () {
             const html = response.data;
             const $ = cheerio.load(html);
             Counter = $('.counter').data("count");
-
-            console.log(Counter);
+            //disabled to stop spam
+            //console.log(Counter);
         })
         .catch(console.error);
 return Counter;
