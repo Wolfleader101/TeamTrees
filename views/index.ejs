@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Tree Count!</title>
+</head>
+<body>    
+    <h1>Number of Trees:</h1>
+    <h2 id="trees"><%= Counter  %></h2>
+</body>
+<script> 
+setInterval(function(){
+    fetch('/update')
+    .then(res => res.json())
+    .then(json => document.getElementById("trees").innerHTML= json["data"]);
+        
+    }, 5000);
+</script>
+</html>
+
